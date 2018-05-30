@@ -13,15 +13,208 @@
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- font awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Syncopate:700" rel="stylesheet">
     </head>
 
     <body>
-        
-        <h1>Hello World!</h1>
-        
-        <h2>Testing 1, 2, 3</h2>
 
-      
+        <!-- top nav, desktop and tablet -->
+        <div class="w3-top">
+            <div class="w3-bar w3-theme">
+                <a href="#home" class="w3-bar-item w3-button">Andover F.C.</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small">About</a>
+                <a href="#training" class="w3-bar-item w3-button w3-hide-small">Training</a>
+                <a href="#teams" class="w3-bar-item w3-button w3-hide-small">Teams</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+            </div>
+            <div id="mobileNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#training" class="w3-bar-item w3-button">Training</a>
+                <a href="#teams" class="w3-bar-item w3-button">Teams</a>
+            </div>
+        </div>
+        <!-- top nav, mobile -->
+
+        <div class="w3-content">
+                    <img class="mySlides" src="img/soccer-team.jpg" style="width:100%">
+                    <img class="mySlides" src="img/soccer-training.jpg" style="width:100%">
+            
+                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div class="w3-padding-64" id="about">
+
+            <div class="w3-row w3-container">
+                <h1>About</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-third">
+                    <a href="#modal1">
+                        <div class="w3-card w3-hover-shadow">
+                            <div class="container w3-center w3-jumbo w3-text-theme2">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-theme2">
+                                <h3>Philosophy</h3>  
+                            </div>
+                        </div>
+
+
+                    </a>
+
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2">
+                            <h3>Staff</h3>  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third">
+                    <div class="w3-card">
+                        <div class="container w3-center w3-jumbo w3-text-theme2">
+                            <i class="fa fa-phone-square"></i>
+                        </div>
+                        <div class="w3-container w3-center w3-theme2">
+                            <h3>Contact</h3>  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Second Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+        </div>
+
+
+        <!-- Container (Training Section) -->
+        <section class="w3-padding-64" id="training">
+
+            <div class="w3-row w3-container">
+                <h1>Training</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div class="w3-card">
+                        <img src="img/soccer-team.jpg" class="w3-image" alt="Soccer Team Training">
+                    </div>
+                </div>
+                <div class="w3-half">
+
+                    <button onclick="accordion('dribbling')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        Dribbling</button>
+
+                    <div id="dribbling" class="w3-container w3-hide">
+                        <p>Some text..</p>
+                    </div>
+
+                    <button onclick="accordion('passing')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        Passing</button>
+
+                    <div id="passing" class="w3-container w3-hide">
+                        <p>Some text..</p>
+                    </div>
+
+                    <button onclick="accordion('positioning')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        Positioning</button>
+
+                    <div id="positioning" class="w3-container w3-hide">
+                        <p>Some text..</p>
+                    </div>
+
+                    <button onclick="accordion('defense')" class="w3-button w3-block w3-left-align w3-theme w3-border">
+                        Defense</button>
+
+                    <div id="defense" class="w3-container w3-hide">
+                        <p>Some text..</p>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Second Parallax Image with Logo Text -->
+        <div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
+        </div>
+
+
+        <!-- Container (Teams Section) -->
+        <section class="w3-padding-64" id="training">
+
+            <div class="w3-row w3-container">
+                <h1>Teams</h1>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div class="w3-card">
+                        <img src="img/soccer-team.jpg" class="w3-image" alt="Soccer Team Training">
+                    </div>
+                </div>
+                <div class="w3-half">
+
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-bar-item w3-button" onclick="openTab('essexCounty')">Essex</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Paris')">Paris</button>
+                        <button class="w3-bar-item w3-button" onclick="openTab('Tokyo')">Tokyo</button>
+                    </div>
+
+                    <div id="essexCounty" class="tab">
+                        <div class="w3-container">
+                            <h2>Essex</h2>
+                            <p>The Essex County team is based in Essex County, Masachusetts.</p>
+                        </div>
+
+                    </div>
+
+                    <div id="Paris" class="tab" style="display:none">
+                        <h2>Paris</h2>
+                        <p>Paris is the capital of France.</p> 
+                    </div>
+
+                    <div id="Tokyo" class="tab" style="display:none">
+                        <h2>Tokyo</h2>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Javascript -->
+
+        <script src="js/topNav.js"></script>
+        <script src="js/accordion.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/slideshow.js"></script>
+
     </body>
 
 </html>
